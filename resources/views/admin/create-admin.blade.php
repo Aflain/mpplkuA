@@ -24,11 +24,11 @@ ADD USER
       <th scope="row">Admin</th>
       <td>Afifah@apps.ipb.ac.id</td>
       <td>12-12-2000</td>
-      <td><a type="button" class="text-primary" data-toggle="modal" data-target="#exampleModal"> <i class="fe-edit-1"></i>Edit</a></td>
+      <td><a type="button" class="text-primary" data-toggle="" data-target="#exampleModal"> <i class="fe-edit-1"></i>Edit</a></td>
     </tr>
     
-   
 
+    
   </tbody>
 </table>
 </div>

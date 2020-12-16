@@ -12,11 +12,11 @@
         </div> 
 
 <div class="col-6 col-md-2" >
-<div class="my-2"><a href="{{route('admin-diprosesketeranganlulus')}}">
+<div class="my-2"><a href="/admin/diproses-keterangan-lulus/{{$daftarSKL->id}}">
 <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
 </a></div>
 
-    <a href="{{route('admin-ditolakketeranganlulus')}}">
+    <a href="/admin/ditolak-keterangan-lulus/{{$daftarSKL->id}}">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
     </a>
 </div></div>

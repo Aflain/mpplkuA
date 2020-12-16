@@ -12,11 +12,11 @@
         </div> 
 
 <div class="col-6 col-md-2" >
-<div class="my-2"><a href="{{route('admin-diprosespengundurandiri')}}">
+<div class="my-2"><a href="/admin/diproses-pengunduran-diri/{{$daftarSPD->id}}">
 <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
 </a></div>
 
-    <a href="{{route('admin-ditolakpengundurandiri')}}">
+    <a href="/admin/ditolak-pengunduran-diri/{{$daftarSPD->id}}">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
     </a>
 </div></div>
@@ -164,7 +164,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#">{{ $daftarSPD->fileSuratPengajuanMahasiswa}}</a>
+                                                    <a href = "#"> {{ $daftarSPD->fileSuratPengajuanMahasiswa}}</a>
                                                     </div>
                                                 </div>
                                                 <br>

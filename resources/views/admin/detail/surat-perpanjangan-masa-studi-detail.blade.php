@@ -12,11 +12,11 @@
         </div> 
 
 <div class="col-6 col-md-2" >
-<div class="my-2"><a href="{{route('admin-diprosesperpanjanganmasa')}}">
+<div class="my-2"><a href="/admin/diproses-perpanjangan-masa/{{$daftarSPMS->id}}">
 <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
 </a></div>
 
-    <a href="{{route('admin-ditolakperpanjanganmasa')}}">
+    <a href="/admin/ditolak-perpanjangan-masa/{{$daftarSPMS->id}}">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
     </a>
 </div></div>
@@ -128,7 +128,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-3">
-                                                    <a href = "#">{{ $daftarSPMS->fileTabelRencanaStudi}}</a>
+                                                    <a href = "#"> {{ $daftarSPMS->fileTabelRencanaStudi}}</a>
                                                     </div>
                                                 </div>
                                                
