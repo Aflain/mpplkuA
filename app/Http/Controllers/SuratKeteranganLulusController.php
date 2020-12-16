@@ -37,7 +37,7 @@ class SuratKeteranganLulusController extends Controller
         ]);
         
         $data                           = new SuratKeteranganLulus(); //object surat keterangan lulus
-        $data->users_id                 = Auth::guard('users')->id(); 
+        $data->users_id                 = Auth::id(); 
         $data->alamatAsal               = $request->input('alamatAsal');
         $data->alamatBogor              = $request->input('alamatBogor');
 

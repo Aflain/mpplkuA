@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
@@ -21,27 +22,25 @@ class UserLoginController extends Controller
       'email' => 'required|email',
       'password' => 'required'
     ]);
+      if(Auth::attempt($request->only('email','password'))){
+        return redirect()->route('user-dashboard');
+      }
 
-      // Attempt to log the user in
-      // Passwordnya pake bcrypt
-    // if (Auth::guard('users')->attempt(['email' => $request->email, 'password' => $request->password])) {
-    //     return redirect()->intended('/user/dashboard');
-    // }
+      return back()->withErrors(['email' => 'Email atau Kata Sandi Salah!']);
 
-    if (auth()->guard('users')->attempt(['email' => $request->email, 'password' => $request->password ])) {
-      return redirect()->route('user-dashboard');
+      // if (Auth::guard('users')->attempt(['email' => $request->email, 'password' => $request->password, $request->remember])) {
+      //   return redirect()->intended(route('user.dashboard'));
+      // }
+      // return redirect()->back()->with($request->only('email','remember'));
+
+  
   }
 
-  return back()->withErrors(['email' => 'Email atau Kata Sandi Salah!']);
-
-  }
-
-  public function logout()
+  public function logout(Request $request)
   {
-    if (Auth::guard('users')->check()) {
-        Auth::guard('users')->logout();
-    }
-
+   
+    // Auth::guard('users')->logout();
+    Auth::logout();
     return redirect('/');
     
   }

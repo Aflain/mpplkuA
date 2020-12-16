@@ -3,24 +3,17 @@
     <div class="slimscroll-menu">
         <!-- LOGO -->
         <div class="logo-box">
-            <h1 class="text-uppercase text-center pb-3">
+            <h2 class="text-uppercase text-center pb-3">
                 <a class="logo">SIMARSIP</a>            
-            </h1>
-            <!-- Logo not used
-            <a href="#" class="logo">
-                <span class="logo-lg">
-                    <img src="{{asset('highdamin/light/assets/images/logo-dark.png')}}" alt="" height="22">
-                </span>
-            </a>
-            -->
+            </h2>
         </div>
         <!-- User box -->
         <div class="user-box">
-            <img src="{{asset('highdamin/light/assets/images/users/avatar-7.jpg')}}" alt="user-img" title="Mat Helme" class="rounded-circle" height="48">
+            <img src="{{asset(Auth::user()->foto_profil)}}" alt="user-img" title="Mat Helme" class="rounded-circle" alt="no image uploaded" style="border-radius: 50%; width: 100px; height: 100px;">
             <div class="dropdown">
-                <a href="#" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">John Doe</a>
+                <a href="#" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">{{Auth::user()->nama}}</a>
             </div>
-            <p class="text-muted">G64170000</p>
+            <p class="text-muted">{{Auth::user()->nim}}</p>
         </div>
 
         <!--- Sidemenu -->
@@ -35,7 +28,7 @@
 
                 <li>
                     <a href="{{route('user-biodata')}}">
-                        <i class="fe-airplay"></i>
+                        <i class="fe-user"></i>
                         <span> Biodata </span>
                     </a>
                 </li>

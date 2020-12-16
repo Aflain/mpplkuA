@@ -57,10 +57,10 @@ return [
             'provider' => 'admin',
         ],
 
-        'users' => [
-          'driver' => 'session',
-          'provider' => 'users',
-        ],
+        // 'users' => [
+        //   'driver' => 'session',
+        //   'provider' => 'users',
+        // ],
 
         'user-api' => [
             'driver' => 'token',
@@ -120,6 +120,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'admin' => [
+            'provider' => 'admin',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

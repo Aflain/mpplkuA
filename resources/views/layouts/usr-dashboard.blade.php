@@ -21,14 +21,15 @@
                        <!-- Account dropdown -->
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="{{asset(Auth::user()->foto_profil)}}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                            John Doe<i class="mdi mdi-chevron-down"></i> 
+                                {{Auth::user()->nama}}<i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
-                                <a href="#" class="dropdown-item notify-item">
-                                    <i class="fi-power"></i> <span>Keluar</span>
+                                <a href="{{route('user-logout')}}" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>  <span>Keluar</span>
                                 </a>
                             </div>
                         </li>

@@ -14,10 +14,8 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (Auth::guard('admin')->check()) {
-            return redirect('/admin');
-        } else if (Auth::guard('users')->check()) {
-            return redirect('/user');
+        if (! $request->expectsJson()) {
+            return route('user-login');
         }
     }
 }

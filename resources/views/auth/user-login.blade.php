@@ -24,11 +24,6 @@
                             <div class="card-box shadow-none p-4 mt-2">
                                 <h1 class="text-uppercase text-center pb-3">
                                     <a class="logo">SIMARSIP</a>
-                                    <!-- Please do not delete it until next sprint review
-                                    <a href="index.html" class="text-success">
-                                        <span><img src="/highdamin/light/assets/images/logo-dark.png" alt="" height="26"></span>
-                                    </a>
-                                    -->
                                 </h1>
     
                                 <form class="form-horizontal" method="POST" role="form" action="{{route('user-login')}}">
@@ -58,9 +53,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <div class="col-12">
-
                                             <div class="checkbox checkbox-primary">
                                                 <input id="remember" name="remember" type="checkbox" checked="" value="{{ old('remember') ? 'checked' : '' }}">
                                                 <label for="remember">
@@ -68,7 +62,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row text-center">
                                         <div class="col-12">
@@ -84,7 +78,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row mt">
+                                <div class="row mt-4">
                                     <div class="col-sm-12 text-center">
                                         <a href="{{route('admin-login')}}" class="text-dark ml-1"><b>Masuk sebagai Admin</b></a>
                                     </div>

@@ -31,7 +31,7 @@ class SuratPerpanjanganMasaStudiController extends Controller
         ]);
         
         $data                                       = new SuratPerpanjanganMasaStudi(); //object surat perpanjangan masa studi
-        $data->users_id                             = Auth::guard('users')->id();
+        $data->users_id                             = Auth::id();
         $data->waktuAkhirPerpanjangan               = $request->input('waktuAkhirPerpanjangan');
         $data->waktuAkhirPerpanjangan_TahunAkademik = $request->input('waktuAkhirPerpanjangan_TahunAkademik');
 

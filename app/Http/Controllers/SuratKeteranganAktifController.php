@@ -31,7 +31,7 @@ class SuratKeteranganAktifController extends Controller
         ]);
         
         $data                      = new SuratKeteranganAktif(); //object surat keterangan aktif
-        $data->users_id            = Auth::guard('users')->id();
+        $data->users_id            = Auth::id();
         $data->keperluan           = $request->input('keperluan');
 
         //Validasi and request

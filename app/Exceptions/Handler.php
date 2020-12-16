@@ -54,8 +54,19 @@ class Handler extends ExceptionHandler
       if($request->expectsJson()){
         return response()->json(['error' => 'Unauthenticated.'], 401);
       }
+      //define guard to default route
 
-      return redirect('/login');
+      $guard = $exception->guards()[0];
+      switch($guard){
+          case 'admin' :
+                $login ='admin-login';
+                break;
+          default:
+                $login ='user-login';
+                break;
+      }
+    //   return redirect('/login');
+      return redirect()->guest(route($login));
     }
 
     public function register()

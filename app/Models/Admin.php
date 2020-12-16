@@ -17,12 +17,12 @@ class Admin extends Authenticatable
      * @var array
      */
 
-    protected $table = "admin";
-
+    protected $table = 'admin';
+    protected $guard = 'admin';
     protected $primaryKey = "id";
 
     protected $fillable = [
-        'email', 'password',
+        'email', 'password','foto_profil','is_super'
     ];
 
     /**

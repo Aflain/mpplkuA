@@ -29,12 +29,12 @@
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <span class="pro-user-name ml-1">
-                                        Afifah Noviani<i class="mdi mdi-chevron-down"></i> 
+                                    {{Auth::guard('admin')->user()->nama}} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
-                                <a href="#" class="dropdown-item notify-item">
+                                <a href="{{route('admin-logout')}}" class="dropdown-item notify-item">
                                     <i class="fi-power"></i> <span>Keluar</span>
                                 </a>
                             </div>

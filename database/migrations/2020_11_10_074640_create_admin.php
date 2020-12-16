@@ -15,8 +15,11 @@ class CreateAdmin extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('foto_profil')->default('img/foto_profil/default.jpg');
             $table->string('email');
             $table->string('password');
+            $table->boolean('is_super')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });

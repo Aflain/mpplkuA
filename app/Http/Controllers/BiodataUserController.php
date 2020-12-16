@@ -26,7 +26,7 @@ class BiodataUserController extends Controller
         //kiri nama di db                   kanan req nama di field form name
         $biodata_user = BiodataUser::where('id', $request->id)->first();
         // dd($biodata_user);
-        $biodata_user->users_id         =  Auth::guard('users')->id();
+        $biodata_user->users_id         =  Auth::id();
         $biodata_user->id               =  $request->input('id');
         $biodata_user->jenis_Kelamin    =  $request->input('jeniskelamin');
         $biodata_user->nomor_Telepon    =  $request->input('nomortelepon');

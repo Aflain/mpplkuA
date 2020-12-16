@@ -13,7 +13,7 @@
                         <div class="profile-user-box card-box bg-primary">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <span class="float-left mr-2"><img src="/highdamin/light/assets/images/users/avatar-7.jpg" alt="" class="avatar-xl rounded-circle"></span>
+                                    <span class="float-left mr-2"><img id="profile" src="{{asset($user->foto_profil)}}" alt="no image uploaded" style="border-radius: 50%; width: 100px; height: 100px;" class="avatar-xl rounded-circle"></span>
                                     <div class="media-body text-white">
                                     
                                         <h4 class="mt-1 mb-1 text-white font-18">{{ $user->nama }} </h4>

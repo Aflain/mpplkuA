@@ -90,7 +90,11 @@ class AdminController extends Controller
         return view('admin.create-admin');
     }
 
-    public function viewKeluar()
+    public function ___construct(){
+        $this->middleware('auth:admin');
+      }
+    
+    public function viewLogin()
     {
         return view('admin.login');
     }

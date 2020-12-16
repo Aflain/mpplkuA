@@ -26,15 +26,15 @@ class UsersRegistrationController extends Controller
         $users = User::create(request(['nama', 'nim', 'email', 'password']));
         $biodata_user = new BiodataUser;
         $biodata_user->users_id = $users->id;
-        $biodata_user->jenis_Kelamin = 'NULL';
-        $biodata_user->nomor_Telepon = 'NULL';
-        $biodata_user->asal_Prodi = 'NULL';
-        $biodata_user->departemen = 'NULL';
+        $biodata_user->jenis_Kelamin = '';
+        $biodata_user->nomor_Telepon = '';
+        $biodata_user->asal_Prodi = '';
+        $biodata_user->departemen = '';
         $biodata_user->semester = 1;
-        $biodata_user->tahun_Akademik = 'NULL';
+        $biodata_user->tahun_Akademik = '';
         $biodata_user->save();
         //auth()->login($users);
         
-        return redirect()->to('/user/login');
+        return redirect()->to('/login');
     }
 }

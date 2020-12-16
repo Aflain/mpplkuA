@@ -16,8 +16,9 @@ class CreateUsers extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('nim');
+            $table->string('nim')->nullable();
             $table->string('email');
+            $table->string('foto_profil')->default('img/foto_profil/default.jpg');
             $table->string('password');
             $table->timestamps();
         });

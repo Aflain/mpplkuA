@@ -34,7 +34,7 @@ class SuratKeteranganCutiController extends Controller
         ]);
         
         $data                               = new SuratKeteranganCuti(); //object surat keterangan cuti
-        $data->users_id                     = Auth::guard('users')->id();
+        $data->users_id                     = Auth::id();
         $data->waktuCuti_TahunAkademik      = $request->input('waktuCuti_TahunAkademik');
         $data->waktuCuti_Semester           = $request->input('waktuCuti_Semester');
         $data->alasanCuti                   = $request->input('alasanCuti');

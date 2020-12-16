@@ -34,7 +34,7 @@ class SuratPengunduranDiriController extends Controller
         ]);
         
         $data                               = new SuratPengunduranDiri(); //object surat pengunduran diri
-        $data->users_id                     = Auth::guard('users')->id();
+        $data->users_id                     = Auth::id();
         $data->tahunAkademikPengunduran     = $request->input('tahunAkademikPengunduran');
         $data->tanggalPengunduran           = $request->input('tanggalPengunduran');
         $data->tahunTerakhirAktif           = $request->input('tahunTerakhirAktif');

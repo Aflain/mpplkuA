@@ -5,9 +5,9 @@
 
         <!-- User box -->
         <div class="user-box">
-            <img src="{{asset('highdamin/light/assets/images/users/avatar-1.jpg')}}" alt="user-img" title="Mat Helme" class="rounded-circle" height="48">
+            <img src="{{asset(Auth::guard('admin')->user()->foto_profil)}}" alt="user-img" title="Mat Helme" class="rounded-circle" alt="no image uploaded" style="border-radius: 50%; width: 100px; height: 100px;">
             <div class="dropdown">
-                <a href="#" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">Afifah Noviani</a>
+                <a href="#" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">{{Auth::guard('admin')->user()->nama}}</a>
             </div>
         </div>
 
@@ -35,12 +35,12 @@
                     </ul>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="{{route('admin-create')}}">
                         <i class="fe-user"></i>
                         <span> Pengaturan Admin </span>
                     </a>
-                </li>
+                </li> -->
 
             </ul>
 
