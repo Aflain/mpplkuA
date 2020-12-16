@@ -12,11 +12,11 @@
         </div> 
 
 <div class="col-6 col-md-2" >
-<div class="my-2"><a href="{{route('admin-diprosesketerangancuti')}}">
+<div class="my-2"><a href="/admin/diproses-keterangan-cuti/{{$daftarSKC->id}}">
 <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
 </a></div>
 
-    <a href="{{route('admin-ditolakketerangancuti')}}">
+    <a href="/admin/ditolak-keterangan-cuti/{{$daftarSKC->id}}">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
     </a>
 </div></div>
@@ -140,7 +140,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengajuanMahasiswa}} </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengajuanMahasiswa}}</a>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -152,7 +152,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-4">
-                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengantarDept}} </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengantarDept}}</a>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -165,7 +165,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> {{ $daftarSKC->fileSuratKeteranganDokter}}  </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratKeteranganDokter}}</a>
                                                     </div>
                                                 </div>
                                                 <br>

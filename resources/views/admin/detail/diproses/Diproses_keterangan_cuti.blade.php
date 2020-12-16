@@ -43,7 +43,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    Afifah Noviani
+                                                    {{ $user->nama }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -55,7 +55,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    G64170023
+                                                    {{ $user->nim }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -67,7 +67,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    Perempuan
+                                                    {{ $biodata_user->jenis_Kelamin }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -79,7 +79,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    0895366362474
+                                                    {{ $biodata_user->nomor_Telepon }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -91,7 +91,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-5">
-                                                    afifah_novian@apps.ipb.ac.id
+                                                    {{ $user->email }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -103,7 +103,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    2020
+                                                    {{ $daftarSKC->waktuCuti_TahunAkademik}}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -115,7 +115,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    Ganjil
+                                                    {{ $daftarSKC->waktuCuti_Semester}}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -127,7 +127,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-5">
-                                                    Alasan
+                                                    {{ $daftarSKC->alasanCuti}}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -139,7 +139,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> Surat Pengajuan Mahasiswa.pdf </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengajuanMahasiswa}}<</a>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -151,7 +151,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-4">
-                                                    <a href = "#"> Surat Pengantar Departemen.pdf </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratPengantarDept}}</a>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -164,7 +164,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> Surat Keterangan Dokter.pdf </a>
+                                                    <a href = "#"> {{ $daftarSKC->fileSuratKeteranganDokter}}</a>
                                                     </div>
                                                 </div>
                                                 <br>
