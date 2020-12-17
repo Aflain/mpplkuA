@@ -182,7 +182,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "{{route('surat.displayAttachment',[$daftarSKA->id,'f2.png'])}}"> aaaaaaa</a>
+                                                    <a href = ""> {{ $daftarSKA->fileKTM }} </a>
                                                     </div>
                                                 </div>
                                                 <!-- end row -->
