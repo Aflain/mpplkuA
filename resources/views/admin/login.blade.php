@@ -17,7 +17,7 @@
 
   <body>
   
-  <div class="card text-white bg-dark mb-3;">
+  <div class="card mb-3;">
       <div class="pt-3">
           <div class="ml-5">
              <h4>SIMARSIP ADMIN</h4>
@@ -30,7 +30,8 @@
       <div class="card text-white bg-dark mb-3" style="width: 30rem;">
         <div class="card-body">
           <h4 class="text-center">
-            <div class="mt-5">Masuk</div>
+          <div>Admin SIMARSIP</div>
+            <div class="mt-2">Masuk</div>
           </h4>
 
           <form class="form-horizontal" method="POST" role="form" action="{{route('admin-login')}}">

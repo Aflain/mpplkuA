@@ -34,7 +34,7 @@
                     <img src="/highdamin/dark/assets/images/icons/data_backup.svg" alt="" width="104%" class="img-responsive logo">
                 </th>
                 <td> 
-                    <h3 class="card-title">Surat Diproes</h3> 
+                    <h3 class="card-title">Surat Diproses</h3> 
                     <h0><p class="card-text">{{$diproses}}</p></h0>
                 </td>
                   </tr>
