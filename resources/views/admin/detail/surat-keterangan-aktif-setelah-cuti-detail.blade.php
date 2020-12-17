@@ -96,6 +96,8 @@
                                                     </div>
                                                 </div>
                                                 <br>
+                                                <h5> Waktu Cuti : </h5>
+                                                <br>
                                                 <div class="row">
                                                     <div class="col-2">
                                                     Tahun Akademik
@@ -156,7 +158,8 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                          
+                                                <h5> File yang Dibutuhkan : </h5>
+                                                <br>
                                                 <div class="row">
                                                     <div class="col-2">
                                                     Unggah Surat Cuti
@@ -189,7 +192,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#">{{ $daftarSKASC->fileBayarSPP}}</a>
+                                                    <a href = "#"> {{ $daftarSKASC->fileBayarSPP}}</a>
                                                     </div>
                                                 </div>
  

@@ -80,7 +80,7 @@
 
                                 <div class="row mt-4">
                                     <div class="col-sm-12 text-center">
-                                        <a href="{{route('admin-login')}}" class="text-dark ml-1"><b>Masuk sebagai Admin</b></a>
+                                        <a href="/admin/login" class="text-dark ml-1"><b>Masuk sebagai Admin</b></a>
                                     </div>
                                 </div>
 

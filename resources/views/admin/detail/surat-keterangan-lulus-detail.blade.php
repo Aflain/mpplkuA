@@ -165,7 +165,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#">{{ $daftarSKL->fileSkripsi}}</a>
+                                                    <a href = "#"> {{ $daftarSKL->fileSkripsi}}</a>
                                                     </div>
                                                 </div>
                                                 <br>
