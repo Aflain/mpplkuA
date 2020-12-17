@@ -72,7 +72,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->jenis_Kelamin }}
+                                                    {{ $biodata_user->jenis_kelamin }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -84,7 +84,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->nomor_Telepon }}
+                                                    {{ $biodata_user->nomor_Telepon}}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -108,7 +108,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->semester}}
+                                                    7
                                                     </div>
                                                 </div>
                                                 <br>
@@ -120,7 +120,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->asal_Prodi }}
+                                                    Ilmu Komputer
                                                     </div>
                                                 </div>
                                                 <br>
@@ -132,7 +132,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->departemen}}
+                                                    Ilmu Komputer
                                                     </div>
                                                 </div>
                                                 <br>
@@ -144,7 +144,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    {{ $biodata_user->tahun_Akademik}}
+                                                    2017/2018
                                                     </div>
                                                 </div>
                                                 <br>
@@ -156,7 +156,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-4">
-                                                    {{ $daftarSKA->keperluan}}
+                                                    {{ $daftarSKA->keperluan }}
                                                     </div>
                                                 </div>
                                                 <br>
@@ -170,7 +170,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> {{$daftarSKA->fileKTM}}</a>
+                                                    <a href = "#"> {{ $daftarSKA->fileKTM }} </a>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -182,7 +182,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = "#"> {{$daftarSKA->fileBayarSPP}}</a>
+                                                    <a href = "{{route('surat.displayAttachment',[$daftarSKA->id,'f2.png'])}}"> aaaaaaa</a>
                                                     </div>
                                                 </div>
                                                 <!-- end row -->

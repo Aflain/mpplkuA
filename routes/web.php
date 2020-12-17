@@ -126,4 +126,6 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function (){
     Route::get('surat/surat-keterangan-cuti-detail/{id}', [UserController::class, 'viewSuratKeteranganCutiDetail'])->name('user-surat-keterangan-cuti-detail');
     Route::get('surat/surat-keterangan-aktif-cuti-detail/{id}', [UserController::class,'viewSuratKeteranganAktifCutiDetail'])->name('user-surat-keterangan-aktif-cuti-detail');
     Route::get('surat/legalisir-transkrip-detail/{id}', [UserController::class,'viewLegalisirTranskripDetail'])->name('user-legalisir-transkrip-detail');
+
+    Route::get('surat/surat-keterangan-aktif-detail/{id}/{attachment}', [UserController::class, 'show'])->name('surat.displayAttachment');
 });

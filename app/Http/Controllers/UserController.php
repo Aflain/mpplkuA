@@ -15,6 +15,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function show($id,$path)
+    {
+        return File('/storage/f2.png');
+    }
+
     public function viewLogin()
     {
         return view('auth.user-login');
@@ -27,13 +32,14 @@ class UserController extends Controller
 
     public function viewDashboard()
     {
-        $daftarSurat = LegalisasiTranskrip::select('id','nama_surat','status_surat','created_at')
-                        ->unionAll(SuratKeteranganAktif::select('id','nama_surat','status_surat','created_at'))
-                        ->unionAll(SuratKeteranganAktifSetelahCuti::select('id','nama_surat','status_surat','created_at'))
-                        ->unionAll(SuratKeteranganCuti::select('id','nama_surat','status_surat','created_at'))
-                        ->unionAll(SuratKeteranganLulus::select('id','nama_surat','status_surat','created_at'))
-                        ->unionAll(SuratPengunduranDiri::select('id','nama_surat','status_surat','created_at'))
-                        ->unionAll(SuratPerpanjanganMasaStudi::select('id','nama_surat','status_surat','created_at'))
+        $user_id     = Auth::id();
+        $daftarSurat = LegalisasiTranskrip::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id)
+                        ->unionAll(SuratKeteranganAktif::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
+                        ->unionAll(SuratKeteranganAktifSetelahCuti::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
+                        ->unionAll(SuratKeteranganCuti::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
+                        ->unionAll(SuratKeteranganLulus::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
+                        ->unionAll(SuratPengunduranDiri::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
+                        ->unionAll(SuratPerpanjanganMasaStudi::select('id','nama_surat','status_surat','created_at')->where('users_id',$user_id))
                         ->get();
 
         return view('user.dashboard',compact('daftarSurat'));
