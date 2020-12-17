@@ -15,13 +15,13 @@ class MailController extends Controller
 
         $data =array(
             'namecomplain'=> $request->namecomplain,
-            // 'emailcomplain'=> $request->emailcomplain,
-            'email_body'=> $request->email_body
+            'email_body'=> $request->email_body,
+            'emailaddress'=>$request->emailaddress
         );
         //Kirim Email
         Mail::send('email_template', $data, function($mail) use($emailaddress){
-            $mail->to('designfyy@gmail.com')
-                    ->subject("Email Pengunjung SIMARSIP FMIPA");
+            $mail->to('designfyy@gmail.com', 'SIMARSIP ADMIN')
+                 ->subject("Email Pengunjung SIMARSIP FMIPA");
             $mail->from($emailaddress, 'Pengunjung SIMARSIP FMIPA');
         });
 
