@@ -6,7 +6,7 @@
 <div class="col-10">
            <div class="card-header"> 
              <h3> STATUS SURAT </h3>                
-<h4><span class="badge label-table badge-info">Pending</span></h4>
+<h4><span class="badge label-table badge-info">{{ $daftarSKA->status_surat}}</span></h4>
 
     </div>
         </div> 
