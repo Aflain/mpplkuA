@@ -79,7 +79,7 @@ class AdminController extends Controller
                         ->unionAll(SuratPerpanjanganMasaStudi::select('id','nama_surat','status_surat','created_at'))
                         ->get();
 
-        return view('admin.surat-ditolak', compact('daftarSurat'));
+        return view('admin.surat-selesai', compact('daftarSurat'));
 
         //return view('admin.surat-selesai');
     }

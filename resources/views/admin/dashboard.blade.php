@@ -64,6 +64,7 @@
     </div>
   </div>
 
+                <!--
                 <div class="mb-3">
                   <div class="row">
                     <div class="col-12 text-sm-center form-inline">
@@ -85,6 +86,7 @@
                     </div>
                   </div>
                 </div>
+                -->
 
     <table class="table table-striped table-dark">
   <thead>

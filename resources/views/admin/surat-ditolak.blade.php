@@ -32,6 +32,7 @@
 
   @foreach($daftarSurat as $s)
   <tr>
+    @if($s->status_surat == "Ditolak")
     <th scope="row">{{$s->nama_surat}}</th>
       <td>{{ $s->created_at }}</td>
       <td>
@@ -73,6 +74,7 @@
         @endif
       </td>
     </tr>
+    @endif
   @endforeach
 
   </tbody>

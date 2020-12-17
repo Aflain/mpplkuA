@@ -56,6 +56,7 @@
                                 <div class="card-box">
                                     <h1 class="header-title{font-size:px;}">Pengajuan Surat</h1>
 
+                                    <!--
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col-12 text-sm-center form-inline">
@@ -73,6 +74,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    -->
 
                                     <div class="table-responsive">
                                     <table id="demo-foo-filtering" class="table table-striped table-bordered toggle-circle mb-0" data-page-size="7">
