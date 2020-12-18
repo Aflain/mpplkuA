@@ -50,6 +50,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function (){
 
     //surat detail
     Route::get('/surat-keterangan-aktif-detail/{id}', [AdminController::class, 'viewSuratKeteranganAktif'])->name('admin-suratketeranganaktif');
+    Route::get('/surat-keterangan-aktif-detail/{id}/{request}', [SuratKeteranganAktifController::class, 'update'])->name('update-suratketeranganaktif');
+    
     Route::get('/legalisir-detail/{id}', [AdminController::class, 'viewLegalisir'])->name('admin-legalisir');
     Route::get('/surat-keterangan-cuti-detail/{id}', [AdminController::class, 'viewSuratKeteranganCuti'])->name('admin-suratketerangancuti');
     Route::get('/surat-keterangan-aktif-setelah-cuti-detail/{id}', [AdminController::class, 'viewSuratKeteranganAktifSetelahCuti'])->name('admin-suratketeranganaktifsetelahcuti');
