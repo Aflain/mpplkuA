@@ -138,13 +138,13 @@ class AdminController extends Controller
         if($daftarSL){
             $user              = User::where('id',$daftarSL->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSL->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSL->status_surat == 'Pending'){
                 return view('admin.detail.legalisir-transkrip-detail', compact('daftarSL','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSL->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_legalisir', compact('daftarSL','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSL->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_legalisir', compact('daftarSL','user','biodata_user'));
             }
         }
@@ -157,13 +157,13 @@ class AdminController extends Controller
         if($daftarSKC){
             $user              = User::where('id',$daftarSKC->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSKC->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSKC->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-cuti-detail', compact('daftarSKC','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKC->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_cuti', compact('daftarSKC','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSKC->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_keterangan_cuti', compact('daftarSKC','user','biodata_user'));
             }
         }
@@ -176,13 +176,13 @@ class AdminController extends Controller
         if($daftarSKASC){
             $user              = User::where('id',$daftarSKASC->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSKASC->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSKASC->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-aktif-setelah-cuti-detail', compact('daftarSKASC','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKASC->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_aktif_setelah_cuti', compact('daftarSKASC','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSKASC->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_keterangan_aktif_setelah_cuti', compact('daftarSKASC','user','biodata_user'));
             }
         }
@@ -195,13 +195,13 @@ class AdminController extends Controller
         if($daftarSKL){
             $user              = User::where('id',$daftarSKL->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSKL->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSKL->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-lulus-detail', compact('daftarSKL','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKL->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_lulus', compact('daftarSKL','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSKL->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_keterangan_lulus', compact('daftarSKL','user','biodata_user'));
             }
         }
@@ -214,13 +214,13 @@ class AdminController extends Controller
         if($daftarSPD){
             $user              = User::where('id',$daftarSPD->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSPD->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSPD->status_surat == 'Pending'){
                 return view('admin.detail.surat-pengunduran-diri-detail', compact('daftarSPD','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSPD->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_pengunduran_diri', compact('daftarSPD','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSPD->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_pengunduran_diri', compact('daftarSPD','user','biodata_user'));
             }
         }
@@ -232,13 +232,13 @@ class AdminController extends Controller
         if($daftarSPMS){
             $user              = User::where('id',$daftarSPMS->users_id)->first();
             $biodata_user      = BiodataUser::where('users_id',$daftarSPMS->users_id)->first();
-            if($daftarSKA->status_surat == 'Pending'){
+            if($daftarSPMS->status_surat == 'Pending'){
                 return view('admin.detail.surat-perpanjangan-masa-studi-detail', compact('daftarSPMS','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSPMS->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_perpanjangan_masa', compact('daftarSPMS','user','biodata_user'));
             }
-            if($daftarSKA->status_surat == 'Ditolak'){
+            if($daftarSPMS->status_surat == 'Ditolak'){
                 return view('admin.detail.ditolak.ditolak_perpanjangan_masa', compact('daftarSPMS','user','biodata_user'));
             }
         }
