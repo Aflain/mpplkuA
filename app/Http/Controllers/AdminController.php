@@ -141,7 +141,7 @@ class AdminController extends Controller
             if($daftarSL->status_surat == 'Pending'){
                 return view('admin.detail.legalisir-transkrip-detail', compact('daftarSL','user','biodata_user'));
             }
-            if($daftarSL->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSL->status_surat == 'Diproses' || $daftarSL->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_legalisir', compact('daftarSL','user','biodata_user'));
             }
             if($daftarSL->status_surat == 'Ditolak'){
@@ -160,7 +160,7 @@ class AdminController extends Controller
             if($daftarSKC->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-cuti-detail', compact('daftarSKC','user','biodata_user'));
             }
-            if($daftarSKC->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKC->status_surat == 'Diproses' || $daftarSKC->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_cuti', compact('daftarSKC','user','biodata_user'));
             }
             if($daftarSKC->status_surat == 'Ditolak'){
@@ -179,7 +179,7 @@ class AdminController extends Controller
             if($daftarSKASC->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-aktif-setelah-cuti-detail', compact('daftarSKASC','user','biodata_user'));
             }
-            if($daftarSKASC->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKASC->status_surat == 'Diproses' || $daftarSKASC->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_aktif_setelah_cuti', compact('daftarSKASC','user','biodata_user'));
             }
             if($daftarSKASC->status_surat == 'Ditolak'){
@@ -198,7 +198,7 @@ class AdminController extends Controller
             if($daftarSKL->status_surat == 'Pending'){
                 return view('admin.detail.surat-keterangan-lulus-detail', compact('daftarSKL','user','biodata_user'));
             }
-            if($daftarSKL->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSKL->status_surat == 'Diproses' || $daftarSKL->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_keterangan_lulus', compact('daftarSKL','user','biodata_user'));
             }
             if($daftarSKL->status_surat == 'Ditolak'){
@@ -217,7 +217,7 @@ class AdminController extends Controller
             if($daftarSPD->status_surat == 'Pending'){
                 return view('admin.detail.surat-pengunduran-diri-detail', compact('daftarSPD','user','biodata_user'));
             }
-            if($daftarSPD->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSPD->status_surat == 'Diproses' || $daftarSPD->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_pengunduran_diri', compact('daftarSPD','user','biodata_user'));
             }
             if($daftarSPD->status_surat == 'Ditolak'){
@@ -235,7 +235,7 @@ class AdminController extends Controller
             if($daftarSPMS->status_surat == 'Pending'){
                 return view('admin.detail.surat-perpanjangan-masa-studi-detail', compact('daftarSPMS','user','biodata_user'));
             }
-            if($daftarSPMS->status_surat == 'Diproses' || $daftarSKA->status_surat == 'Selesai'){
+            if($daftarSPMS->status_surat == 'Diproses' || $daftarSPMS->status_surat == 'Selesai'){
                 return view('admin.detail.diproses.Diproses_perpanjangan_masa', compact('daftarSPMS','user','biodata_user'));
             }
             if($daftarSPMS->status_surat == 'Ditolak'){

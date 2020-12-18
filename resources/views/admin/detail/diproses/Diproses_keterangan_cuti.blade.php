@@ -4,7 +4,17 @@
 <div class="card-box">
            <div class="card-header"> 
              <h3> STATUS SURAT </h3>                
-<h4><span class="badge label-table badge-warning">Diproses</span></h4>
+<h4>
+@if($daftarSKC->status_surat == 'Diproses')
+    <span class="badge label-table badge-warning">
+@endif
+@if($daftarSKC->status_surat == 'Selesai')
+    <span class="badge label-table badge-success">
+@endif
+{{$daftarSKC->status_surat}}
+</span>
+</h4>
+
  </div>
 
 <h3>Unggah Berkas</h3>
