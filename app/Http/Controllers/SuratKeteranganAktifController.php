@@ -70,20 +70,32 @@ class SuratKeteranganAktifController extends Controller
         return view('user/surat/detail-surat-keterangan_aktif/detail',compact('data'));
     }
  
-    public function update($id, $status_surat)
-    {
-        $data                      = SuratKeteranganAktif::where('id',$id)->first(); //object surat keterangan aktif
-        $data->status_surat        = $status_surat;
+    public function update(Request $request, $id)
+    {   
+        $data = SuratKeteranganAktif::where('id',$id)->first(); //object surat keterangan aktif
+        
+        if($data->status_surat == 'Pending'){
+            if($request->status_surat == 'Diproses' || $request->status_surat == 'Ditolak'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+            }
+            return redirect(route('admin-suratketeranganaktif', $id));
+        }
+        
+        if($data->status_surat == 'Diproses'){
+            if($request->status_surat == 'Selesai'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+                return redirect(route('admin-selesai'));
+            }
+        }
+        
         if($data->status_surat == 'Ditolak'){
             $data->alasan_penolakan = $request->alasan_penolakan;
+            $data->save();
+            return redirect(route('admin-ditolak'));
         }
-        $data->save();
-        if($data->status_surat == 'Diproses'){
-            return redirect(route('admin-diprosesketeranganaktif', $id));
-        }
-        if($data->status_surat == 'Ditolak'){
-            return redirect(route('admin-ditolakketeranganaktif', $id));
-        }
+        abort(404);
     }
  
     public function destroy($id)

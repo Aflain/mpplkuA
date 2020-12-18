@@ -87,15 +87,31 @@ class SuratKeteranganCutiController extends Controller
     }
  
     public function update(Request $request, $id)
-    {
-        $data                      = SuratKeteranganCuti::where('id',$id)->first(); //object surat keterangan cuti
-        $data->status_surat        = $request->status_surat;
+    {   
+        $data = SuratKeteranganCuti::where('id',$id)->first(); //object surat keterangan cuti
+        
+        if($data->status_surat == 'Pending'){
+            if($request->status_surat == 'Diproses' || $request->status_surat == 'Ditolak'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+            }
+            return redirect(route('admin-suratketerangancuti', $id));
+        }
+        
+        if($data->status_surat == 'Diproses'){
+            if($request->status_surat == 'Selesai'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+                return redirect(route('admin-selesai'));
+            }
+        }
+        
         if($data->status_surat == 'Ditolak'){
             $data->alasan_penolakan = $request->alasan_penolakan;
+            $data->save();
+            return redirect(route('admin-ditolak'));
         }
-        $data->save();
-
-        return redirect('/admin/dashboard')->with('success', 'Perubahan berhasil'); //belum fix route redirectnya
+        abort(404);
     }
  
     public function destroy($id)

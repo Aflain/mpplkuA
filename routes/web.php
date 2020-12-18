@@ -50,32 +50,25 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function (){
 
     //surat detail
     Route::get('/surat-keterangan-aktif-detail/{id}', [AdminController::class, 'viewSuratKeteranganAktif'])->name('admin-suratketeranganaktif');
-    Route::get('/surat-keterangan-aktif-detail/{id}/{request}', [SuratKeteranganAktifController::class, 'update'])->name('update-suratketeranganaktif');
+    Route::post('/surat-keterangan-aktif-detail/{id}', [SuratKeteranganAktifController::class, 'update'])->name('update-suratketeranganaktif');
     
     Route::get('/legalisir-detail/{id}', [AdminController::class, 'viewLegalisir'])->name('admin-legalisir');
+    Route::post('/legalisir-detail/{id}', [LegalisasiTranskripController::class, 'update'])->name('update-legalisir');
+    
     Route::get('/surat-keterangan-cuti-detail/{id}', [AdminController::class, 'viewSuratKeteranganCuti'])->name('admin-suratketerangancuti');
+    Route::post('/surat-keterangan-cuti-detail/{id}', [SuratKeteranganCutiController::class, 'update'])->name('update-suratketerangancuti');
+    
     Route::get('/surat-keterangan-aktif-setelah-cuti-detail/{id}', [AdminController::class, 'viewSuratKeteranganAktifSetelahCuti'])->name('admin-suratketeranganaktifsetelahcuti');
+    Route::post('/surat-keterangan-aktif-setelah-cuti-detail/{id}', [SuratKeteranganAktifSetelahCutiController::class, 'update'])->name('update-suratketeranganaktifsetelahcuti');
+    
     Route::get('/surat-keterangan-lulus-detail/{id}', [AdminController::class, 'viewSuratKeteranganLulus'])->name('admin-suratketeranganlulus');
+    Route::post('/surat-keterangan-lulus-detail/{id}', [SuratKeteranganLulusController::class, 'update'])->name('update-suratketeranganlulus');
+    
     Route::get('/surat-pengunduran-diri-detail/{id}', [AdminController::class, 'viewSuratPengunduranDiri'])->name('admin-suratpengundurandiri');
+    Route::post('/surat-pengunduran-diri-detail/{id}', [SuratPengunduranDiriController::class, 'update'])->name('update-suratpengundurandiri');
+    
     Route::get('/surat-perpanjangan-masa-detail/{id}', [AdminController::class, 'viewSuratPerpanjanganMasa'])->name('admin-suratperpanjanganmasa');
-    
-    //surat diproses
-    Route::get('/diproses-legalisir/{id}', [AdminController::class, 'viewDiprosesLegalisir'])->name('admin-diproseslegalisir');
-    Route::get('/diproses-keterangan-aktif-setelah-cuti/{id}', [AdminController::class, 'viewDiprosesKeteranganAktifSetelahCuti'])->name('admin-diprosesketeranganaktifsetelahcuti');
-    Route::get('/diproses-keterangan-aktif/{id}', [AdminController::class, 'viewDiprosesKeteranganAktif'])->name('admin-diprosesketeranganaktif');
-    Route::get('/diproses-keterangan-cuti/{id}', [AdminController::class, 'viewDiprosesKeteranganCuti'])->name('admin-diprosesketerangancuti');
-    Route::get('/diproses-keterangan-lulus/{id}', [AdminController::class, 'viewDiprosesKeteranganLulus'])->name('admin-diprosesketeranganlulus');
-    Route::get('/diproses-pengunduran-diri/{id}', [AdminController::class, 'viewDiprosesPengunduranDiri'])->name('admin-diprosespengundurandiri');
-    Route::get('/diproses-perpanjangan-masa/{id}', [AdminController::class, 'viewDiprosesPerpanjanganMasa'])->name('admin-diprosesperpanjanganmasa');
-    
-    //surat ditolak
-    Route::get('/ditolak-legalisir/{id}', [AdminController::class, 'viewDitolakLegalisir'])->name('admin-ditolaklegalisir');
-    Route::get('/ditolak-keterangan-aktif-setelah-cuti/{id}', [AdminController::class, 'viewDitolakKeteranganAktifSetelahCuti'])->name('admin-ditolakketeranganaktifsetelahcuti');
-    Route::get('/ditolak-keterangan-aktif/{id}', [AdminController::class, 'viewDitolakKeteranganAktif'])->name('admin-ditolakketeranganaktif');
-    Route::get('/ditolak-keterangan-cuti/{id}', [AdminController::class, 'viewDitolakKeteranganCuti'])->name('admin-ditolakketerangancuti');
-    Route::get('/ditolak-keterangan-lulus/{id}', [AdminController::class, 'viewDitolakKeteranganLulus'])->name('admin-ditolakketeranganlulus');
-    Route::get('/ditolak-pengunduran-diri/{id}', [AdminController::class, 'viewDitolakPengunduranDiri'])->name('admin-ditolakpengundurandiri');
-    Route::get('/ditolak-perpanjangan-masa/{id}', [AdminController::class, 'viewDitolakPerpanjanganMasa'])->name('admin-ditolakperpanjanganmasa');
+    Route::post('/surat-perpanjangan-masa-detail/{id}', [SuratPerpanjanganMasaStudiController::class, 'update'])->name('update-suratperpanjanganmasa');
 });
    
   

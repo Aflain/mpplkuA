@@ -7,18 +7,17 @@
 <h4><span class="badge label-table badge-danger">Ditolak</span></h4>
  </div>
 
-<h3>Alasan Penolakan</h3>
-
+ <form method="POST" action="{{route('update-suratketeranganaktifsetelahcuti', $daftarSKASC->id)}}">
+{{ csrf_field() }}
 <div class="row">
     <div class="col-5">
-        <input type="text" id="alamatasal" class="form-control" placeholder="Ketik Disini">
+        <input type="text" name="alasan_penolakan" class="form-control" placeholder="Ketik Disini">
     </div>
     <div class="col">
-    <a href="{{route('admin-ditolak')}}"> 
         <button style="max-width: 10rem;" type="submit" class="btn btn-success btn-block">SUBMIT</button>
-    </a>
     </div>
 </div>
+</form>
 
 
 <body>

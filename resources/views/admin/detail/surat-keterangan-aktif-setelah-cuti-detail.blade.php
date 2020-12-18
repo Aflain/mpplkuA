@@ -12,13 +12,17 @@
         </div> 
 
 <div class="col-6 col-md-2" >
-<div class="my-2"><a href="/admin/diproses-keterangan-aktif-setelah-cuti/{{$daftarSKASC->id}}">
-<button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
-</a></div>
-
-    <a href="/admin/ditolak-keterangan-aktif-setelah-cuti/{{$daftarSKASC->id}}">
+<div class="my-2">
+    <form method="POST" action="{{route('update-suratketeranganaktifsetelahcuti', $daftarSKAC->id)}}">
+        {{ csrf_field() }}
+        <input  name="status_surat" value="Diproses" type="hidden">
+        <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
+    </form></div>
+    <form method="POST" action="{{route('update-suratketeranganaktifsetelahcuti', $daftarSKAC->id)}}">
+        {{ csrf_field() }}
+        <input  name="status_surat" value="Ditolak" type="hidden">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
-    </a>
+    </form>
 </div></div>
 
 

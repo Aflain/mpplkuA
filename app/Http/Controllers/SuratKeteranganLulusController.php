@@ -134,15 +134,31 @@ class SuratKeteranganLulusController extends Controller
     }
  
     public function update(Request $request, $id)
-    {
-        $data                      = SuratKeteranganLulus::where('id',$id)->first(); //object surat keterangan lulus
-        $data->status_surat        = $request->status_surat;
+    {   
+        $data = SuratKeteranganLulus::where('id',$id)->first(); //object surat keterangan lulus
+        
+        if($data->status_surat == 'Pending'){
+            if($request->status_surat == 'Diproses' || $request->status_surat == 'Ditolak'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+            }
+            return redirect(route('admin-suratketeranganlulus', $id));
+        }
+        
+        if($data->status_surat == 'Diproses'){
+            if($request->status_surat == 'Selesai'){
+                $data->status_surat = $request->status_surat;
+                $data->save();
+                return redirect(route('admin-selesai'));
+            }
+        }
+        
         if($data->status_surat == 'Ditolak'){
             $data->alasan_penolakan = $request->alasan_penolakan;
+            $data->save();
+            return redirect(route('admin-ditolak'));
         }
-        $data->save();
-
-        return redirect('/admin/dashboard')->with('success', 'Perubahan berhasil'); //belum fix route redirectnya
+        abort(404);
     }
  
     public function destroy($id)

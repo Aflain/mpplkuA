@@ -9,16 +9,18 @@
 
 <h3>Unggah Berkas</h3>
 
+<form method="POST" action="{{route('update-suratketeranganaktif', $daftarSKA->id)}}">
+{{ csrf_field() }}
 <div class="row">
     <div class="col-4">
-            <input type="file" id="suratpengantardept" class="form-control" placeholder=".pdf">
+            <input  name="status_surat" value="Selesai" type="hidden">
+            <input type="file" name="suratpengantardept" class="form-control" placeholder=".pdf">
     </div>
     <div class="col">
-    <a href="{{route('admin-selesai')}}"> 
         <button style="max-width: 10rem;" type="submit" class="btn btn-success btn-block">SUBMIT</button>
-    </a>
     </div>
 </div>
+</form>
 
 
 <body>

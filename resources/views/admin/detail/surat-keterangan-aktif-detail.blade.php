@@ -13,12 +13,16 @@
         
 <div class="col-6 col-md-2" >
 <div class="my-2">
-    <a href="{{route('update-suratketeranganaktif', [$daftarSKA->id,'Diproses'])}}">
+    <form method="POST" action="{{route('update-suratketeranganaktif', $daftarSKA->id)}}">
+        {{ csrf_field() }}
+        <input  name="status_surat" value="Diproses" type="hidden">
         <button style="max-width: 10rem;" type="submit" class="btn btn-warning btn-block">PROSES</button>
-    </a></div>
-    <a href="{{route('update-suratketeranganaktif', [$daftarSKA->id,'Ditolak'])}}">
+    </form></div>
+    <form method="POST" action="{{route('update-suratketeranganaktif', $daftarSKA->id)}}">
+        {{ csrf_field() }}
+        <input  name="status_surat" value="Ditolak" type="hidden">
         <button style="max-width: 10rem;" type="submit" class="btn btn-danger btn-block">TOLAK</button>
-    </a>
+    </form>
 </div></div>
 
 
