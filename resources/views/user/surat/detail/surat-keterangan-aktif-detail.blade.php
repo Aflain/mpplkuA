@@ -182,7 +182,7 @@
                                                     :
                                                     </div>
                                                     <div class="col-2">
-                                                    <a href = ""> {{ $daftarSKA->fileKTM }} </a>
+                                                    <a href = ""> {{ $daftarSKA->fileBayarSPP }} </a>
                                                     </div>
                                                 </div>
                                                 <!-- end row -->
